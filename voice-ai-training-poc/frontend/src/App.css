@@ -1,0 +1,80 @@
+/* =========================================================
+   App.css — Voice AI Training POC
+   Global styles and single-column centered layout
+   ========================================================= */
+
+/* --- Reset / Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: #111827;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* --- Centered single-column wrapper --- */
+.app-root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- White card container --- */
+.app-card {
+  width: 100%;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- App title --- */
+.app-title {
+  margin: 0 0 24px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.3px;
+}
+
+/* --- Transcript panel scroll support ---
+   TranscriptPanel itself has a fixed height + overflow-y: auto.
+   Ensure the card doesn't clip it. */
+.app-card > *:last-child {
+  min-height: 0;
+}
+
+/* --- Responsive tweaks for small screens --- */
+@media (max-width: 600px) {
+  #root {
+    padding: 16px 8px;
+  }
+
+  .app-card {
+    padding: 20px 16px;
+    border-radius: 8px;
+  }
+
+  .app-title {
+    font-size: 18px;
+  }
+}
