@@ -1,0 +1,12 @@
+# Dependencies
+voice-ai-training-poc/frontend/node_modules/
+voice-ai-training-poc/backend/.env
+voice-ai-training-poc/backend/__pycache__/
+voice-ai-training-poc/backend/.venv/
+*.pyc
+.DS_Store
+
+# Helper batch scripts
+git_push.bat
+git_check.bat
+fix_and_push.bat
